@@ -41,7 +41,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         String txt_column3 = column3.get(position);
         String txt_column4 = column4.get(position);
 
-        holder.myColumn1.setText(new StringBuilder("Column 01 ") + txt_column1);
+        //holder.myColumn1.setText(new StringBuilder("Column 01 ") + txt_column1);
+        holder.myColumn1.setText(txt_column1);
         holder.myColumn2.setText(txt_column2);
         holder.myColumn3.setText(txt_column3);
         holder.myColumn4.setText(txt_column4);

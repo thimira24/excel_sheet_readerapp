@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SyncingFailedActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_baseline_wifi_off_24"
+        app:tint="#616161"
+        android:contentDescription="@string/network_image" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/data_syncing_failed"
+        android:textColor="@color/colordark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/try_these_steps_to_get_back_your_data"
+        android:textColor="@color/colordark_sub"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/check_your_modem_and_router"
+        android:textColor="@color/colordark_sub"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_baseline_check_circle_24"
+        app:drawableLeftCompat="@drawable/ic_baseline_check_circle_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/reconnect_to_wi_fi_or_mobile_data"
+        android:textColor="@color/colordark_sub"
+        android:textSize="14sp"
+        app:drawableLeftCompat="@drawable/ic_baseline_check_circle_24"
+        app:drawableStartCompat="@drawable/ic_baseline_check_circle_24" />
+
+    <Button
+        android:id="@+id/btn_reload"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/regular"
+        android:text="@string/reload_page"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Sheet As App</string>
+
+    <string name="column1">Column 01</string>
+    <string name="column2">Column 02</string>
+    <string name="column3">Column 03</string>
+    <string name="column4">Column 04</string>
+    <string name="data_syncing_failed">Data syncing failed!</string>
+    <string name="reload_page">Reload Page</string>
+    <string name="reconnect_to_wi_fi_or_mobile_data">Reconnect to Wi-Fi or Mobile data</string>
+    <string name="check_your_modem_and_router">Check your modem and router</string>
+    <string name="try_these_steps_to_get_back_your_data">Try these steps to get back your data:</string>
+    <string name="network_image">nImg</string>
+</resources>

@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void httpClient() {
-
-        String url = "https://github.com/thimiradulakshitha/excel-reader-android-app/blob/master/story.xls?raw=true";
+        //  String url = "https://github.com/sheetasapp/excel-reader-android-app/blob/master/story.xls?raw=true";
+        String url = "https://github.com/sheetasapp/excel-reader-android-app2/blob/master/story.xls?raw=true";
         client = new AsyncHttpClient();
         popup_layout.setVisibility(View.VISIBLE);
         client.get(url, new FileAsyncHttpResponseHandler(this) {
@@ -161,6 +161,13 @@ public class MainActivity extends AppCompatActivity {
             });
 
             return true;
+        }
+
+        if (id == R.id.action_table_view){
+           startActivity(new Intent(MainActivity.this, TableActivity.class));
+        }
+        if (id == R.id.action_refresh){
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
         }
         return super.onOptionsItemSelected(item);
 

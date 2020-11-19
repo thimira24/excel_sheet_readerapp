@@ -2,10 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_table_view"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_table_chart_24"
+        android:iconTint="@color/colorWhite"
+        android:title="Refresh"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_refresh_24"
+        android:iconTint="@color/colorWhite"
+        android:title="Refresh"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_help"
         android:orderInCategory="100"
         android:icon="@drawable/ic_baseline_help_outline_24"
         android:iconTint="@color/colorWhite"
         android:title="Refresh"
         app:showAsAction="always" />
+
 </menu>

@@ -43,9 +43,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         //holder.myColumn1.setText(new StringBuilder("Column 01 ") + txt_column1);
         holder.myColumn1.setText(txt_column1);
-        holder.myColumn2.setText(txt_column2);
-        holder.myColumn3.setText(txt_column3);
-        holder.myColumn4.setText(txt_column4);
+        holder.myColumn2.setText(new StringBuilder("AGING : ") + txt_column2);
+        holder.myColumn3.setText(new StringBuilder("AMOUNT : ")+ txt_column3);
+        holder.myColumn4.setText(new StringBuilder("REMARKS : ") + txt_column4);
 
     }
 
@@ -60,7 +60,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            //listImg = itemView.findViewById(R.id.img_image);
             myColumn1 = itemView.findViewById(R.id.txt_column1);
             myColumn2 = itemView.findViewById(R.id.txt_column2);
             myColumn3 = itemView.findViewById(R.id.txt_column3);

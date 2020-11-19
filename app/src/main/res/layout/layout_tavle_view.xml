@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:maxWidth="150dp"
+                android:minWidth="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/txt_column1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:fontFamily="@font/regular"
+                android:textAlignment="viewStart"
+                android:text="name"
+                android:textSize="17dp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:minWidth="150dp"
+                android:maxWidth="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txt_column2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textAlignment="textEnd"
+                android:text="name"
+                android:fontFamily="@font/regular"
+                android:textSize="17dp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:inputType="number"
+                android:maxLines="1"
+                android:minWidth="150dp"
+                android:maxWidth="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txt_column3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/regular"
+                android:gravity="right"
+                android:text="name"
+                android:paddingRight="10dp"
+                android:textSize="17dp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:minWidth="150dp"
+                android:maxWidth="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txt_column4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textAlignment="textEnd"
+                android:paddingRight="10dp"
+                android:text="name"
+                android:textSize="17dp"
+                tools:ignore="RtlCompat" />
+        </TableRow>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+    </TableLayout>
+
+</LinearLayout>

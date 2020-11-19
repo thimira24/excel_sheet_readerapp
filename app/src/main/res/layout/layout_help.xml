@@ -16,7 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_baseline_close_24" />
+            android:src="@drawable/ic_baseline_close_24"
+            android:contentDescription="@string/todo1" />
 
 
     </RelativeLayout>
@@ -32,18 +33,19 @@
         <ImageView
             android:layout_width="70dp"
             android:layout_height="90dp"
-            android:src="@drawable/icon_box" />
+            android:src="@drawable/icon_box"
+            android:contentDescription="@string/todo2" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
-            android:text="Sheet as App"
+            android:text="@string/sheet_as_app"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textColor="@color/colordark"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -51,10 +53,10 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
-            android:text="Open your excel sheet with us"
+            android:text="@string/open_your_excel_sheet_as_app"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -63,10 +65,10 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
-            android:text="Version 1.0"
+            android:text="@string/version_1_0"
             android:textAlignment="center"
             android:textColor="@color/colordark"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -74,10 +76,10 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
-            android:text="Developed by Thimira Dulakshitha"
+            android:text="@string/developed_by_thimira_dulakshitha"
             android:textAlignment="center"
             android:textColor="@color/colordark"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 

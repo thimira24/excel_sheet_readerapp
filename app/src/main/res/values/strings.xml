@@ -11,4 +11,11 @@
     <string name="check_your_modem_and_router">Check your modem and router</string>
     <string name="try_these_steps_to_get_back_your_data">Try these steps to get back your data:</string>
     <string name="network_image">nImg</string>
+    <string name="todo1">TODO</string>
+    <string name="open_your_excel_sheet_as_app">Open your excel sheet as App</string>
+    <string name="developed_by_thimira_dulakshitha">Developed by Thimira Dulakshitha</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="sheet_as_app">Sheet as App</string>
+    <string name="todo2">TODO</string>
+    <string name="syncing">Syncing...</string>
 </resources>

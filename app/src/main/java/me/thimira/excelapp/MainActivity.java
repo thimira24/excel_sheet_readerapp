@@ -1,15 +1,20 @@
 package me.thimira.excelapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -42,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     AsyncHttpClient client;
     Workbook workbook;
     List<String> column1, column2, column3, column4;
-    ProgressBar progressBar;
     TextView txtLoading;
     LinearLayout popup_layout;
 
@@ -53,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.list_of_data);
         btnRefresh = findViewById(R.id.btn_refresh);
-        progressBar = findViewById(R.id.progressBar);
         txtLoading = findViewById(R.id.txt_loading);
         popup_layout = findViewById(R.id.layer_popup_sync);
 
@@ -65,18 +68,18 @@ public class MainActivity extends AppCompatActivity {
         httpClient();
         refreshButtonAction();
 
+
+
     }
 
     private void httpClient() {
+
         String url = "https://github.com/thimiradulakshitha/excel-reader-android-app/blob/master/story.xls?raw=true";
         client = new AsyncHttpClient();
-        progressBar.setVisibility(View.VISIBLE);
-        txtLoading.setVisibility(View.VISIBLE);
         popup_layout.setVisibility(View.VISIBLE);
         client.get(url, new FileAsyncHttpResponseHandler(this) {
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, File file) {
-                progressBar.setVisibility(View.GONE);
                 txtLoading.setVisibility(View.GONE);
                 popup_layout.setVisibility(View.GONE);
                 startActivity(new Intent(MainActivity.this, SyncingFailedActivity.class));
@@ -85,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, File file) {
-                progressBar.setVisibility(View.GONE);
                 txtLoading.setVisibility(View.GONE);
                 popup_layout.setVisibility(View.GONE);
                // Toast.makeText(MainActivity.this, "Syncing data..", Toast.LENGTH_SHORT).show();
@@ -124,9 +126,7 @@ public class MainActivity extends AppCompatActivity {
         btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtLoading.setText("Refreshing...");
-                progressBar.setVisibility(View.GONE);
-               // httpClient();
+                Toast.makeText(MainActivity.this, "Refreshing...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, MainActivity.class));
                 finish();
             }
@@ -144,7 +144,22 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_help) {
-            startActivity(new Intent(MainActivity.this, ActivityHelp.class));
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_AppCompat_Light_NoActionBar);
+            View itemView = LayoutInflater.from(this).inflate(R.layout.layout_help, null);
+
+            ImageView btn_close = (ImageView) itemView.findViewById(R.id.btn_close_help);
+
+            builder.setView(itemView);
+            final AlertDialog dialog = builder.create();
+            dialog.show();
+
+            btn_close.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+
             return true;
         }
         return super.onOptionsItemSelected(item);

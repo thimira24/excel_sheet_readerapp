@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "me.thimira.excelapp"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -36,5 +36,6 @@ dependencies {
     implementation 'net.sourceforge.jexcelapi:jxl:2.6.12' // to read excel file
     implementation 'com.loopj.android:android-async-http:1.4.10' // used to download the xcel file from the server
     implementation 'com.squareup.picasso:picasso:2.71828' //load images
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 
 }
